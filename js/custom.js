@@ -80,3 +80,57 @@ $(document).ready(function(){
              
         
 });
+
+/* Active menu on click*/
+$(document).ready(function(){
+   'use strict';
+    
+    $('.navbar-nav li a').click(function(){
+       'use strict';
+        
+        $('.navbar-nav li a').parent().removeClass("active");
+        $(this).parent().addClass("active");
+    });
+});
+
+/*Active menu on scroll*/
+$(document).ready(function(){
+   'use strict';
+    
+    $(window).scroll(function(){
+       'use strict';
+        $("section").each(function(){
+           'use strict';
+            
+            var bb = $(this).attr("id");
+            var height = $(this).outerHeight();
+            var greatTop = $(this).offset().top - 70;
+            
+            if($(window).scrollTop() > greatTop && $(window).scrollTop() < greatTop + height){
+                
+                $(".navbar-nav li a[href='#"+ bb + "']").parent().addClass("active");
+                //similar to .navbar-nav li a [href=#ABOUT]
+            }
+            else{
+                
+                $(".navbar-nav li a[href='#"+ bb + "']").parent().removeClass("active");
+            }
+        });
+    });
+});
+
+/*Add auto padding to header*/
+$(document).ready(function(){
+   'use strict';
+    
+    var windowHeight = $(window).height();
+    
+    var containerHeight = $(".header-container").height();
+    
+    var padtop = windowHeight - containerHeight;
+    
+    $(".header-container").css({
+       'padding-top': Math.round(padtop/2)+'px',
+        'padding-Bottom': Math.round(padtop/2)+'px'
+    },10);
+});
