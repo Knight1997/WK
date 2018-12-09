@@ -84,6 +84,7 @@ navbar-brand img{
 .navbar-default .navbar-nav > .active >a:focus{
     background-color: transparent;
     color: #129CF3;
+    
 }
 /*HEADER*/
 .header{
