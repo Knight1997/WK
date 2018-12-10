@@ -144,3 +144,17 @@ $(document).ready(function(){
        slideMargin: 50
    }); 
 });
+/*Adding counter*/
+$(document).ready(function(){
+   $('.counter-num').counterUp({
+        delay: 10,
+        time: 2000
+   });
+});
+
+/*Adding animations*/
+$(document).ready(function(){
+   'use strict';
+    
+    new WOW().init();
+});
