@@ -134,3 +134,13 @@ $(document).ready(function(){
         'padding-Bottom': Math.round(padtop/2)+'px'
     },10);
 });
+
+$(document).ready(function(){
+   $('.bxslider').bxSlider({
+       slideWidth: 292.5,
+       auto: true,
+       minSlides: 1,
+       maxSlides: 3,
+       slideMargin: 50
+   }); 
+});
